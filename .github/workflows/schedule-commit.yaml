@@ -5,6 +5,7 @@ on:
 jobs:
   generate-data:
     runs-on: ${{ matrix.config.os }}
+    continue-on-error: ${{ matrix.experimental }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
 
