@@ -53,6 +53,7 @@ jobs:
         run: |
           source("R/job.R")
           source("R/regularDashboardRun.R")
+          source("R/colinsPlots.R")
         shell: Rscript {0} 
         
       - name: Commit files
