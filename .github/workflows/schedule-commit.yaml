@@ -5,7 +5,7 @@ on:
 jobs:
   generate-data:
     runs-on: ${{ matrix.config.os }}
-
+    
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
 
     strategy:
