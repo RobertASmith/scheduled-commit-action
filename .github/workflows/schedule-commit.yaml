@@ -48,6 +48,9 @@ jobs:
         run: |
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
+        
+      - name: Manual installation of package
+        run: Rscript -e "install.packages(c('ggtext', 'extrafont'))"
           
       - name: Generate data & plots
         run: |
