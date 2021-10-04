@@ -64,9 +64,5 @@ p1 <- ggplot(data %>% filter(date>as.Date("2021-05-25") & date<max(date)-days(3)
 
 
 ggsave(plot = p1,
-       filename = "plots/COVIDCasesxSex.png", 
-       units="in", 
-       width=12, 
-       height=7, 
-       res=800)
+       filename = "plots/COVIDCasesxSex.png")
 
