@@ -5,8 +5,7 @@ on:
 jobs:
   generate-data:
     runs-on: ${{ matrix.config.os }}
-    continue-on-error: ${{ matrix.experimental }}
-
+    
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
 
     strategy:
@@ -49,9 +48,6 @@ jobs:
         run: |
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
-        
-      - name: Manual installation of package
-        run: Rscript -e "install.packages(c('ggtext', 'extrafont'))"
           
       - name: Generate data & plots
         run: |
