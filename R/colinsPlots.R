@@ -4,9 +4,9 @@ library(dplyr)
 library(ggplot2)
 library(RcppRoll)
 library(lubridate)
-library(ggtext)
+#library(ggtext)
 library(extrafont)
-library(ragg)
+#library(ragg)
 library(paletteer)
 
 theme_custom <- function() {
@@ -55,11 +55,11 @@ p1 <- ggplot(data %>% filter(date>as.Date("2021-05-25") & date<max(date)-days(3)
   scale_colour_manual(values=c("#00cc99", "#6600cc"))+
   facet_wrap(~age)+
   theme_custom()+
-  theme(plot.subtitle=element_markdown(), strip.text=element_blank())+
+  theme(plot.subtitle=element_text(), strip.text=element_blank())+
   geom_text(data=data %>% filter(date==as.Date("2021-06-16") & sex=="Male"),
             aes(x=date, y=140, label=age), colour="Black", family="Lato", fontface="bold")+
   labs(title="COVID case rates in 25-49 year old men and women have diverged in recent weeks",
-       subtitle="Rolling 7-day average of new COVID case rates in <span style='color:#6600cc;'>men</span> and <span style='color:#00cc99;'>women</span> in England, by age.",
+       subtitle="Rolling 7-day average of new COVID case rates in Men and Women in England, by age.",
        caption="Data from coronavirus.data.gov.uk | Plot by @VictimOfMaths")
 
 
