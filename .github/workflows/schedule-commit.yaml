@@ -49,9 +49,10 @@ jobs:
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
           
-      - name: Generate data
+      - name: Generate data & plots
         run: |
           source("R/job.R")
+          source("R/regularDashboardRun.R")
         shell: Rscript {0} 
         
       - name: Commit files
@@ -59,7 +60,7 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add --all
-          git commit -am "add data"
+          git commit -am "add data & plots"
           git push 
 
       - name: Session info

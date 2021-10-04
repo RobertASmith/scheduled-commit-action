@@ -2,14 +2,14 @@ Package: ScheduledCommitAction
 Title: Running R Scripts on a Schedule with GitHub Actions
 Version: 1.0.0
 Authors@R: 
-    person(given = "Simon",
-           family = "Couch",
+    person(given = "Robert",
+           family = "Smith",
            role = c("aut", "cre"),
-           email = "simonpatrickcouch@gmail.com")
-Description: Contains an example repository for running R scripts on a schedule
-    and commiting their results. See the accompanying blog post!
+           email = "rasmith3@sheffield.ac.uk")
+Description: Example COVID github action scripts
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Imports: ggplot2
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
