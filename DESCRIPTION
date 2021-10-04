@@ -10,6 +10,6 @@ Description: Example COVID github action scripts
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: ggplot2, dplyr, curl, RcppRoll, lubridate, ggtext, extrafont, ragg, paletteer
+Depends: ggplot2, dplyr, curl, RcppRoll, lubridate, ggtext, extrafont, ragg, paletteer
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
