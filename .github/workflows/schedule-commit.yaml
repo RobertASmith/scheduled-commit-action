@@ -56,7 +56,7 @@ jobs:
           source("R/colinsPlots.R")
         shell: Rscript {0} 
         
-        - name: Create Pull Request
+      - name: Create Pull Request
         uses: RobertASmith/scheduled-commit-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
