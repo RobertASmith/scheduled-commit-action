@@ -57,7 +57,7 @@ jobs:
         shell: Rscript {0} 
         
       - name: Create Pull Request
-        uses: RobertASmith/scheduled-commit-action@v2
+        uses: RobertASmith/scheduled-commit-action@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Add new files
