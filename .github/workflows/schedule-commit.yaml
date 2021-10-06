@@ -48,6 +48,12 @@ jobs:
         run: |
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
+        
+      - name: Create branch
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git branch testbranch
           
       - name: Generate data & plots
         run: |
@@ -56,11 +62,8 @@ jobs:
           source("R/colinsPlots.R")
         shell: Rscript {0} 
     
-      - name: Commit files
+      - name: Push to branch
         run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git branch testbranch
           git add --all
           git commit -am "add data & plots"
           git push -u origin testbranch 
