@@ -9,6 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Set up R ${{ matrix.r-version }}
+        uses: r-lib/actions/setup-R@v1
+        with:
+          r-version: ${{ matrix.r-version }}
       - name: Install dependencies
         run: |
           install.packages(c("dplyr", "ggplot2", "RcppRoll", "lubridate", "extrafont", "paletteer"))
