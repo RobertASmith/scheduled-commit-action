@@ -53,6 +53,7 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
+          git pull
           git branch testbranch
           git checkout testbranch
           
