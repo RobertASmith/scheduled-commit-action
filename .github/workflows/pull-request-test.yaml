@@ -23,6 +23,7 @@ jobs:
           source("R/job.R")
           source("R/regularDashboardRun.R")
           source("R/colinsPlots.R")
+          source("R/lakePlots.R")
       shell: Rscript {0} 
         
     - name: Create Pull Request
