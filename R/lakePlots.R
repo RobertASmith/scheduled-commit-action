@@ -10,7 +10,7 @@ latestcol <- "DN"
 plot_startdate <- "2020-08-01"
 
 # read in cases from dashboard by region, combine midlands into a single region.
-cases <- read.csv(caseurl) %>% 
+cases <- read.csv(case_url) %>% 
   mutate(Region=case_when(
     areaName %in% c("East Midlands", "West Midlands") ~ "Midlands",
     areaName %in% c("Yorkshire and The Humber", "North East") ~ 
