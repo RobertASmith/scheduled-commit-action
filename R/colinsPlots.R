@@ -261,7 +261,7 @@ myPPT <-
 
 
 # output to file
-print(myPPT, target = "plots/ageSexCases.pptx")
+print(myPPT, target = "template-wide.pptx")
 
 
 
