@@ -9,8 +9,6 @@ library(extrafont)
 library(paletteer)
 library(tidyr)
 library(officer)
-library(readxl)
-library(curl)
 
 theme_custom <- function() {
   theme_classic() %+replace%
