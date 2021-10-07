@@ -9,9 +9,6 @@ case_url <- "https://api.coronavirus.data.gov.uk/v2/data?areaType=region&metric=
 latestcol <- "DN"
 plot_startdate <- "2020-08-01"
 
-
-
-
 # read in cases from dashboard by region, combine midlands into a single region.
 cases <- read.csv(caseurl) %>% 
   mutate(Region=case_when(
@@ -112,11 +109,11 @@ regionPlot <- ggplot()+
        
 # save plots
 ggsave(plot = engPlot, 
-       filename = "../outputs/JNE1215_lakePlotOverall.png",
+       filename = "plots/lakePlotOverall.png",
        width = 12, 
        height = 9)
 
 ggsave(plot = regionPlot, 
-       filename = "../outputs/JNE1215_lakePlotRegional.png",
+       filename = "plots/lakePlotRegional.png",
        width = 12, 
        height = 9)
