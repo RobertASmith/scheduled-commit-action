@@ -215,7 +215,7 @@ ggplot(popheatmapxsex %>% filter(date>as.Date("2021-05-01")))+
 
 myPPT <- 
     # read in template
-     read_pptx() %>%
+     read_pptx("template_wide.pptx") %>%
 
     # Male/Female line charts
 
@@ -261,7 +261,7 @@ myPPT <-
 
 
 # output to file
-print(myPPT, target = "template-wide.pptx")
+print(myPPT, target = "results.pptx")
 
 
 
