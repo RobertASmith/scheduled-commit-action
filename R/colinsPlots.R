@@ -268,7 +268,7 @@ ggplot(data %>% filter(date>as.Date("2020-10-01")), aes(x=date, y=positivity, co
 
 myPPT <- 
     # read in template
-     read_pptx("template/UKHSA_cases_age_sex.pptx") %>%
+     read_pptx() %>%
 
     # Male/Female line charts
 
@@ -331,18 +331,4 @@ print(myPPT, target = "plots/ageSexCases.pptx")
 
 
 
-
-
-COVIDCasesxSex
-COVIDCasesxSexFull
-
-
-
-
-
-ggsave(plot = p1,
-       filename = "plots/COVIDCasesxSex.png")
-
-ggsave(plot = p2,
-       filename = "plots/COVIDCasesxSexFull.png")
 
