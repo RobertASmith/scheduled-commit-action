@@ -6,8 +6,11 @@ library(RcppRoll)
 library(lubridate)
 library(ggtext)
 library(extrafont)
-#library(ragg)
 library(paletteer)
+library(tidyr)
+library(officer)
+library(readxl)
+library(curl)
 
 theme_custom <- function() {
   theme_classic() %+replace%
