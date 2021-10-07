@@ -50,7 +50,7 @@ data <- bind_rows(data.f, data.m) %>%
                                   "85 to 89", "90+")))
 
 
-plot_COVIDCasesxSex <- ggplot(data %>% filter(date>as.Date("2021-05-25") & date<max(date)-days(3)), 
+plot_COVIDCasesxSexRecent <- ggplot(data %>% filter(date>as.Date("2021-05-25") & date<max(date)-days(3)), 
        aes(x=date, y=rates_roll, colour=sex))+
   geom_line(show.legend=FALSE)+
   scale_x_date(name="")+
