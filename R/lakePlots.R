@@ -4,6 +4,7 @@ rm(list = ls())
 library(reshape2)
 library(ggplot2)
 library(dplyr)
+library(ggtext)
 
 # user specified inputs - urls and dates:
 regional_hosp_url <- "https://api.coronavirus.data.gov.uk/v2/data?areaType=nhsRegion&metric=covidOccupiedMVBeds&metric=hospitalCases&metric=newAdmissions&format=csv"
@@ -46,7 +47,8 @@ custom_theme <- theme_classic() +
                       plot.caption.position="plot",
                       strip.background=element_blank(), strip.text=element_text(face="bold", size=rel(1)),
                       plot.title=element_text(face="bold", size=rel(1.5), hjust=0, margin=margin(0,0,5.5,0)),
-                      text=element_text(family="Lato"))
+                      text=element_text(family="Lato"),
+                      plot.subtitle=element_markdown())
                       
                       
                       
@@ -106,7 +108,7 @@ regionPlot <- ggplot()+
   custom_theme +
 
   labs(title = "Regional plots showing hospital occupancy lags cases by around a fortnight",
-       subtitle="Daily confirmed new COVID-19 cases and patients in hospital with COVID-19 in Mechanically Ventilated & all other beds",
+       subtitle="Daily confirmed <span style='color:#47d4ae;'>new COVID-19 cases</span> and patients in hospital with COVID-19 in <span style='color:#ff1437;'>Mechanically Ventilated</span> and<span style='color:#ff9f55;'> all other</span> beds",
        caption = "Data from coronavirus.data.gov.uk")
        
        
