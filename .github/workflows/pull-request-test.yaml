@@ -23,7 +23,7 @@ jobs:
           source("R/regularDashboardRun.R")
           source("R/colinsPlots.R")
           source("R/lakePlots.R")
-          rmarkdown::render("R/example.Rmd")
+          source("R/automatedMarkdown.R")
       shell: Rscript {0} 
     
     #- name: Render Document  
