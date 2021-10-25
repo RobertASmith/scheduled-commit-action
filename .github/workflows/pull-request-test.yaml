@@ -23,8 +23,9 @@ jobs:
           source("R/colinsPlots.R")
           source("R/lakePlots.R")
       shell: Rscript {0} 
-      
-    - uses: lc5415/rmarkdown-action@v1
+    
+    - name: render doc  
+      uses: lc5415/rmarkdown-action@v1
       with:
         input_file: R/example.Rmd
 	output_format: html_document
