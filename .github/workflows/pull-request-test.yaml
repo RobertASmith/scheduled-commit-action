@@ -27,7 +27,7 @@ jobs:
     - name: Render Document  
       uses: lc5415/rmarkdown-action@v1
       with:
-        input_file: 'R/example.Rmd'
+        input_file: R/example.Rmd
 	output_format: html_document
         
     - name: Create Pull Request
