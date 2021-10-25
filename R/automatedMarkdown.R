@@ -1,7 +1,7 @@
 # Automated Rmarkdown creation & online publication...
-rmarkdown::render(output_dir = "plots", 
-                  output_format = "pdf_document",
-                  input = './R/example.Rmd')
+#rmarkdown::render(output_dir = "plots", 
+#                  output_format = "pdf_document",
+#                  input = './R/example.Rmd')
 
 rmarkdown::render(output_dir = "plots", 
                   output_format = "html_document",
