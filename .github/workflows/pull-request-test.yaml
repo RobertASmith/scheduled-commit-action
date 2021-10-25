@@ -13,7 +13,7 @@ jobs:
     
     - name: Install dependencies
       run: |
-        install.packages(c("dplyr", "curl", "readxl", "reshape2", "ggplot2", "RcppRoll", "lubridate", "extrafont", "paletteer","pals", "ggtext", "tidyr", "officer"))
+        install.packages(c("dplyr", "curl", "readxl", "reshape2", "ggplot2", "RcppRoll", "lubridate", "extrafont", "paletteer","pals", "ggtext", "tidyr", "officer", "rmarkdown", "markdown"))
       shell: Rscript {0} 
         
     - name: Generate data & plots
