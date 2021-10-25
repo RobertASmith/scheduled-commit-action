@@ -23,6 +23,11 @@ jobs:
           source("R/colinsPlots.R")
           source("R/lakePlots.R")
       shell: Rscript {0} 
+      
+    - name: Publish Markdown to Rpubs
+      run: |
+          source("R/automatedMarkdown.R")
+      shell: Rscript {0} 
         
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
