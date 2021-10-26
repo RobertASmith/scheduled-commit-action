@@ -16,7 +16,7 @@ p_CasesAutomationTest <-
   scale_x_date(name = "Date")+
   scale_y_continuous(name = "Cases by Specimen Date")+
   ggtitle("Number of Daily Cases by Specimen Date",
-          subtitle = paste(Sys.time()))
+          subtitle = paste(as.POSIXct(format(Sys.time()),tz="GMT")))
   
 # save plot
 ggsave(plot = p_CasesAutomationTest,
