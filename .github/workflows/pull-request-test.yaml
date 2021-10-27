@@ -3,7 +3,7 @@ on:
     branches:
     - master
   schedule:
-    - cron: '* * * * *'
+    - cron: '15 18 * * *'
 
 name: create-pull-request workflow
 jobs:
