@@ -128,3 +128,6 @@ ggsave(plot = plot2,
        width=10, 
        height=8)
 
+print(Sys.time())
+print("Produced both Sanger plots")
+
