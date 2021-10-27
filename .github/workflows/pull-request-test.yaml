@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: '30 16 * * *'
+    - cron: '*/15 * * * *'
 
 name: create-pull-request workflow
 jobs:
@@ -14,7 +14,7 @@ jobs:
     
     - name: Install dependencies
       run: |
-        install.packages(c("dplyr", "curl", "readxl", "reshape2", "ggplot2", "RcppRoll", "lubridate", "extrafont", "paletteer","pals", "ggtext", "tidyr", "officer", "rmarkdown", "markdown"))
+        install.packages(c("dplyr", "curl", "readxl", "reshape2", "ggplot2", "RcppRoll", "lubridate", "extrafont", "paletteer","pals", "ggtext", "tidyr", "officer", "rmarkdown", "markdown", "geofacet"))
       shell: Rscript {0} 
         
     - name: Generate data & plots
@@ -24,12 +24,8 @@ jobs:
           source("R/colinsPlots.R")
           source("R/lakePlots.R")
           source("R/automatedMarkdown.R")
+          source("R/sangerSequencingPlots.R")
       shell: Rscript {0} 
-    
-    #- name: Render Document  
-    #  uses: lc5415/rmarkdown-action@v1
-    #  with:
-    #    input_file: R/example.Rmd
         
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
