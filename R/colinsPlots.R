@@ -262,7 +262,6 @@ myPPT <-
 
 # output to file
 print(myPPT, target = "plots/results.pptx")
-print(myPPT, target = "plots/results.pdf")
 
 
 
