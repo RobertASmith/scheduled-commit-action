@@ -5,6 +5,6 @@ This repository is an example of how to automate reporting using GitHub actions.
 I have used @VictimofMaths' code plotting covid cases by Sex & Age as an example - in part so that other scripts can be automated in the future.
 Colin's code can be found here: https://github.com/VictimOfMaths/COVID-19
 
-![Automation Test](https://github.com/RobertASmith/scheduled-commit-action/blob/create-pull-request/patch/plots/CasesAutomationTest.png)
-
 ![Sequencing data](https://github.com/RobertASmith/scheduled-commit-action/blob/create-pull-request/patch/plots/COVIDGenomesStackedxReg.png)
+
+![Lake Plots](https://github.com/RobertASmith/scheduled-commit-action/blob/create-pull-request/patch/plots/lakePlotRegional.png)
