@@ -6,3 +6,5 @@ I have used @VictimofMaths' code plotting covid cases by Sex & Age as an example
 Colin's code can be found here: https://github.com/VictimOfMaths/COVID-19
 
 ![Automation Test](https://github.com/RobertASmith/scheduled-commit-action/blob/create-pull-request/patch/plots/CasesAutomationTest.png)
+
+![Sequencing data](https://github.com/RobertASmith/scheduled-commit-action/blob/create-pull-request/patch/plots/COVIDGenomesStackedxReg.png)
