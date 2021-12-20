@@ -99,7 +99,7 @@ plot1 <- ggplot(data, aes(x=WeekEndDate, y=Count, fill=strain))+
   theme_classic()+
   theme(strip.background=element_blank(), strip.text=element_text(face="bold", size=rel(1)),
         text=element_text(family="Lato"), plot.title=element_text(face="bold", size=rel(1.4)))+
-  labs(title="The new 'AY4.2' COVID variant represents a small, but growing, proportion of new cases",
+  labs(title="Omicron has grown much faster than other variants",
        subtitle=paste0("Number of total COVID-19 genomes sequenced by the Wellcome Sanger Institute identified as  selected major lineages.\nData up to ", 
                        max(data$WeekEndDate), "and run on", Sys.Date()),
        caption="Data from Wellcome Sanger Institute | Plot by @VictimOfMaths")
@@ -116,7 +116,7 @@ plot2 <- ggplot(data, aes(x=WeekEndDate, y=prop, fill=strain))+
   labs(title="The new 'AY4.2' COVID variant represents a small, but growing, proportion of new cases",
        subtitle=paste0("Proportion of total COVID-19 genomes sequenced by the Wellcome Sanger Institute identified as selected major lineages.\nData up to ", 
                        max(data$WeekEndDate), "and run on", Sys.Date()),
-       caption="Data from Wellcome Sanger Institute | Plot by @VictimOfMaths")
+       caption="Data from Wellcome Sanger Institute")
 
 #=============#
 # save plots
