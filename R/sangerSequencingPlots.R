@@ -71,7 +71,9 @@ data <- merge(sanger_data, arcgis_data, all.x=TRUE) %>%
   group_by(WeekEndDate, Region) %>%
   mutate(Total=sum(Count)) %>%
   ungroup() %>%
-  mutate(prop=Count/Total)
+  mutate(prop=Count/Total,
+         strain=factor(strain, levels=c("B.1.177", "Alpha", "Beta", "Delta non AY.4.2", "Delta AY.4.2",
+                                        "Omicron", "Stealth Omicron", "Other variants")))
 
 
 
@@ -92,7 +94,7 @@ plot1 <- ggplot(data, aes(x=WeekEndDate, y=Count, fill=strain))+
   geom_col(position="stack")+
   scale_x_date(name="")+
   scale_y_continuous(name="Genomes sequenced")+
-  scale_fill_paletteer_d("beyonce::X127", name="Lineage")+
+  scale_fill_paletteer_d("khroma::bright", name="Lineage")+
   facet_geo(~Region, grid=mygrid)+
   theme_classic()+
   theme(strip.background=element_blank(), strip.text=element_text(face="bold", size=rel(1)),
@@ -106,7 +108,7 @@ plot2 <- ggplot(data, aes(x=WeekEndDate, y=prop, fill=strain))+
   geom_col(position="stack")+
   scale_x_date(name="")+
   scale_y_continuous(name="Genomes sequenced", labels=label_percent(accuracy=1))+
-  scale_fill_paletteer_d("beyonce::X127", name="Lineage")+
+  scale_fill_paletteer_d("khroma::bright", name="Lineage")+
   facet_geo(~Region, grid=mygrid)+
   theme_classic()+
   theme(strip.background=element_blank(), strip.text=element_text(face="bold", size=rel(1)),
