@@ -62,6 +62,8 @@ data <- merge(sanger_data, arcgis_data, all.x=TRUE) %>%
       Lineage %in% getLineages(lineages = unique(sanger_data$Lineage),
                                variant_code = c("B.1.1.7")) ~ "Alpha",
       Lineage=="AY.4.2" ~ "Delta AY.4.2",
+      Lineage %in% c("B.1.1.529", "BA.1") ~ "Omicron",
+      Lineage=="BA.2" ~ "Stealth Omicron",
       TRUE ~ "Other variants")) %>%
   group_by(WeekEndDate, strain, Region) %>%
   summarise(Count=sum(Count)) %>%
