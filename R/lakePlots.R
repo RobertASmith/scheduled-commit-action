@@ -85,9 +85,11 @@ engPlot <- ggplot()+
        subtitle="Daily confirmed new COVID-19 cases and patients in hospital with COVID-19 in Mechanically Ventilated & all other beds in England",
        caption="Data from coronavirus.data.gov.uk")
 
+
+
 regionPlot <- ggplot()+
 
-  geom_col(data = cases %>% filter(date > as.Date(plot_startdate)), 
+  geom_col(data = cases %>% filter(date > as.Date(plot_startdate) & Region != "England"), 
            aes(x = date, y=cases), 
            fill="#47d4ae")+
 
@@ -103,7 +105,7 @@ regionPlot <- ggplot()+
 
   scale_fill_manual(values=c("covidOccupiedMVBeds" = "#ff1437", "covidOccupied_nonMVBeds" = "#ff9f55"))+
 
-  facet_wrap(~ areaName)+
+  facet_wrap(~ Region)+
 
   custom_theme +
 
